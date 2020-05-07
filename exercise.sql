@@ -1,6 +1,12 @@
-TRUNCATE planeten;
-ALTER TABLE planeten ADD (naam varchar(30), diameter varchar(30), afstand_tot_de_zon varchar(30), massa varchar(30));
-insert into planeten  (`naam` NOT NULL , `diameter` NOT NULL, `afstand_tot_de_zon` NOT NULL, `massa` NOT NULL, 'bezoek_datum' NULL) values 
+
+CREATE TABLE planeten (naam varchar(30) NOT NULL,
+ diameter varchar(30) NOT NULL,
+ afstand_tot_de_zon varchar(30) NOT NULL,
+ massa varchar(30) NOT NULL,
+ bezoek_datum varchar(30) NULL,
+ id INT AUTO_INCREMENT PRIMARY KEY);
+ 
+insert into planeten  (`naam` , `diameter` , `afstand_tot_de_zon`, `massa` , `bezoek_datum`,  `id`) values 
 ('Zon' ,'1.392.000' ,'-' ,'332.946'), 
 ('Mercurius' ,'4.880' ,'57.910.000' ,'0,1'),
 ('Venus' ,'12.104' ,'108.208.930' ,'0,9'),
